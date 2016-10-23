@@ -20,7 +20,7 @@ public class NoWeather extends JavaPlugin implements Listener {
 	}
 
 	@EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
-	public void WeatherChangeEvent(WeatherChangeEvent event) {
+	public void onWeatherChangeEvent(WeatherChangeEvent event) {
 		if (!event.toWeatherState()) return;
 		if (this.worlds.contains(event.getWorld().getName())) {
 			event.setCancelled(true);
