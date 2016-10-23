@@ -12,6 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class NoWeather extends JavaPlugin implements Listener {
 	private Collection<String> worlds;
 
+	@Override
 	public void onEnable() {
 		Bukkit.getPluginManager().registerEvents(this, this);
 		saveDefaultConfig();
